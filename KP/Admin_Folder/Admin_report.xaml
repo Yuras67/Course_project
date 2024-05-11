@@ -1,0 +1,42 @@
+﻿<Page x:Class="KP.Admin_Folder.Admin_report"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:KP.Admin_Folder"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Admin_report">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="66*"/>
+            <RowDefinition Height="77*"/>
+            <RowDefinition Height="225*"/>
+            <RowDefinition Height="82*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="171*"/>
+            <ColumnDefinition Width="196*"/>
+            <ColumnDefinition Width="158*"/>
+            <ColumnDefinition Width="185*"/>
+            <ColumnDefinition Width="90*"/>
+        </Grid.ColumnDefinitions>
+        <DataGrid x:Name="DGrid_Clients" AutoGenerateColumns="False" Grid.Row="2" Grid.ColumnSpan="5" IsReadOnly="True" Margin="0,0,10,4">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ID товара" Binding="{Binding Product_ID}" Width="*"/>
+                <DataGridTextColumn Header="ID поставщика" Binding="{Binding Provider_ID}" Width="*"/>
+                <DataGridTextColumn Header="Название" Binding="{Binding Product_Name}" Width="*"/>
+                <DataGridTextColumn Header="Производитель" Binding="{Binding Manufacturer}" Width="*"/>
+                <DataGridTextColumn Header="Тип товара" Binding="{Binding Type}" Width="*"/>
+                <DataGridTextColumn Header="Модель" Binding="{Binding Model}" Width="*"/>
+                <DataGridTextColumn Header="Описание" Binding="{Binding Description}" Width="*"/>
+                <DataGridTextColumn Header="Кол-во" Binding="{Binding Quantity}" Width="*"/>
+                <DataGridTextColumn Header="Цена" Binding="{Binding Cost}" Width="*"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Label Grid.Column="1" Content="Отчет о товарах" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Center" FontSize="23" Height="40" Width="180"/>
+        <Button Grid.Column="1" Grid.Row="3" Content="Сохранить Word" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" Width="160" Height="34" Click="Button_Click_Word" Background="#FFB2B2B2"/>
+        <Button Grid.Column="3" Grid.Row="3" Content="Сохранить Excel" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" Width="160" Height="34" Click="Button_Click_Excel" Background="#FFB2B2B2"/>
+    </Grid>
+</Page>

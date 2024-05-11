@@ -1,0 +1,45 @@
+﻿<Window x:Class="KP.Seller_Folder.Seller_Add_Folder.Seller_Add_Client"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:KP.Seller_Folder.Seller_Add_Folder"
+        mc:Ignorable="d"
+        Title='Информационная система "Продажа компьютерной периферии"' 
+        MinHeight="450" MinWidth="800" Height="450" Width="800" MaxHeight="450" MaxWidth="800"
+        Icon="/icon.png">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="66*"/>
+            <RowDefinition Height="61*"/>
+            <RowDefinition Height="36*"/>
+            <RowDefinition Height="38*"/>
+            <RowDefinition Height="38*"/>
+            <RowDefinition Height="41*"/>
+            <RowDefinition Height="41*"/>
+            <RowDefinition Height="35*"/>
+            <RowDefinition Height="94*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="65*"/>
+            <ColumnDefinition Width="269*"/>
+            <ColumnDefinition Width="330*"/>
+            <ColumnDefinition Width="136*"/>
+        </Grid.ColumnDefinitions>
+        <Image Source="/icon.png"/>
+        <Label Grid.Column="1" Content="Добавить клиента" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Top" FontSize="20" Height="37" Width="176"/>
+        <Label Grid.Column="1" Content="Фамилия" HorizontalAlignment="Center" Grid.Row="2" VerticalAlignment="Center" FontSize="15" Height="36" Width="196"/>
+        <Label Grid.Column="1" Content="Имя" HorizontalAlignment="Center" Grid.Row="3" VerticalAlignment="Center" FontSize="15" Height="36" Width="196"/>
+        <Label Grid.Column="1" Content="Отчество" HorizontalAlignment="Center" Grid.Row="4" VerticalAlignment="Center" FontSize="15" Height="36" Width="196"/>
+        <Label Grid.Column="1" Content="Почта" HorizontalAlignment="Center" Grid.Row="5" VerticalAlignment="Center" FontSize="15" Height="36" Width="196"/>
+        <Label Grid.Column="1" Content="Номер телефона" HorizontalAlignment="Center" Grid.Row="6" VerticalAlignment="Center" FontSize="15" Height="36" Width="196"/>
+        <Label Grid.Column="1" Content="Дата рождения" HorizontalAlignment="Center" Grid.Row="7" VerticalAlignment="Center" FontSize="15" Height="36" Width="196"/>
+        <TextBox Text="{Binding Last_Name}" MaxLength="100" Grid.Row="2" Grid.Column="2" Margin="0,5,0,4"/>
+        <TextBox Text="{Binding First_Name}" MaxLength="100" Grid.Row="3" Grid.Column="2" Margin="0,6,0,5"/>
+        <TextBox Text="{Binding Patronomic}" MaxLength="100" Grid.Row="4" Grid.Column="2" Margin="0,6,0,5"/>
+        <TextBox Text="{Binding Email}" MaxLength="100" Grid.Row="5" Grid.Column="2" Margin="0,7,0,6"/>
+        <TextBox Text="{Binding Phone}" MaxLength="100" Grid.Row="6" Grid.Column="2" Margin="0,8,0,6"/>
+        <TextBox Text="{Binding BirthDate, StringFormat=\{0:dd.MM.yyyy\}}" MaxLength="100" Grid.Row="7" Grid.Column="2" Margin="0,3,0,4"/>
+        <Button Grid.Column="2" Content="Добавить клиента" HorizontalAlignment="Center" Grid.Row="8" VerticalAlignment="Top" Height="34" Width="116" Margin="0,13,0,0" Click="Button_Click" Background="#FFB2B2B2"/>
+    </Grid>
+</Window>

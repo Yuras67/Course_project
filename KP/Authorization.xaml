@@ -1,0 +1,32 @@
+﻿<Window x:Class="KP.Authorization"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:KP"
+        mc:Ignorable="d"
+        Title="Авторизация" Icon="/icon.png" 
+        Background="#FFDCDCD9">
+    <Viewbox Stretch="Uniform">
+        <Grid MinHeight="300" MinWidth="450" Height="300" Width="450" MaxHeight="300" MaxWidth="450">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="85*"/>
+                <RowDefinition Height="79*"/>
+                <RowDefinition Height="78*"/>
+                <RowDefinition Height="58*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="137*"/>
+                <ColumnDefinition Width="179*"/>
+                <ColumnDefinition Width="134*"/>
+            </Grid.ColumnDefinitions>
+            <Image Source="/icon.png"/>
+            <Button Content="Войти"  HorizontalAlignment="Center" VerticalAlignment="Center" Width="90" FontSize="15" Click="Button_Click" Background="#FFB2B2B2" Grid.Column="1" Grid.Row="3" Height="24"/>
+            <PasswordBox x:Name="Password" HorizontalAlignment="Center" VerticalAlignment="Center" Width="160" Height="30" FontSize="20" Grid.Column="1" Grid.Row="2"/>
+            <Label Content="Вход" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="30" Height="50" Width="74" Grid.Column="1"/>
+            <TextBox x:Name="Login" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Center" Width="160" Height="30" FontSize="20" Grid.Row="1" Grid.Column="1"/>
+            <Label Content="Логин" HorizontalAlignment="Center" VerticalAlignment="Top" Width="140" Height="25" Grid.Row="1" Grid.Column="1"/>
+            <Label Content="Пароль" HorizontalAlignment="Center"  VerticalAlignment="Top" Width="140" Height="25" Grid.Row="2" Grid.Column="1"/>
+        </Grid>
+    </Viewbox>
+</Window>
